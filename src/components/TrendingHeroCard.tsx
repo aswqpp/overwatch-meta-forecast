@@ -1,18 +1,21 @@
-import { useUIStore } from '../store/uiStore'
+import type { SyntheticEvent } from 'react'
+import { useT } from '../hooks/useT'
 import { heroNames } from '../i18n'
 import { DeltaBadge } from './DeltaBadge'
 import { RoleBadge } from './RoleBadge'
 import type { HeroPrediction } from '../types'
-import type { Strings } from '../i18n'
+
+const hideOnError = (e: SyntheticEvent<HTMLImageElement>) => {
+  e.currentTarget.style.display = 'none'
+}
 
 interface TrendingHeroCardProps {
   hero: HeroPrediction
   rank: number
-  t: Strings
 }
 
-export function TrendingHeroCard({ hero, rank, t }: TrendingHeroCardProps) {
-  const { locale } = useUIStore()
+export function TrendingHeroCard({ hero, rank }: TrendingHeroCardProps) {
+  const { t, locale } = useT()
   const displayName = heroNames[hero.id]?.[locale] ?? hero.name
 
   return (
@@ -23,13 +26,13 @@ export function TrendingHeroCard({ hero, rank, t }: TrendingHeroCardProps) {
           src={`/heroes/${hero.id}.png`}
           alt={displayName}
           className="h-full w-full object-cover"
-          onError={(e) => { e.currentTarget.style.display = 'none' }}
+          onError={hideOnError}
         />
       </div>
       <div className="min-w-0 flex-1">
         <div className="flex items-center gap-2">
           <span className="truncate font-semibold text-zinc-100">{displayName}</span>
-          <RoleBadge role={hero.role} t={t} />
+          <RoleBadge role={hero.role} />
         </div>
         <div className="text-xs text-zinc-400">
           {t.common.pickRate} {(hero.pick_rate * 100).toFixed(1)}%

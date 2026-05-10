@@ -1,20 +1,23 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useUIStore } from '../store/uiStore'
-import type { Strings } from '../i18n'
+import { useT } from '../hooks/useT'
+import { Segmented } from './Segmented'
 import type { Locale } from '../types'
 
-interface NavbarProps {
-  t: Strings
-}
+const LOCALE_OPTIONS: readonly { value: Locale; label: string }[] = [
+  { value: 'ko', label: 'KO' },
+  { value: 'en', label: 'EN' },
+  { value: 'ja', label: 'JA' },
+]
 
-const LOCALES: Locale[] = ['ko', 'en', 'ja']
-
-export function Navbar({ t }: NavbarProps) {
-  const { locale, setLocale } = useUIStore()
+export function Navbar() {
+  const { t } = useT()
+  const locale = useUIStore((s) => s.locale)
+  const setLocale = useUIStore((s) => s.setLocale)
   const { pathname } = useLocation()
 
   const links = [
-    { to: '/', label: t.nav.home },
+    { to: '/',         label: t.nav.home },
     { to: '/forecast', label: t.nav.forecast },
   ]
 
@@ -22,7 +25,7 @@ export function Navbar({ t }: NavbarProps) {
     <nav className="sticky top-0 z-50 border-b border-zinc-800 bg-zinc-950/90 backdrop-blur-sm">
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-5">
-          <Link to="/" className="flex items-center gap-2 shrink-0">
+          <Link to="/" className="flex shrink-0 items-center gap-2">
             <div className="h-7 w-7 rounded-full bg-gradient-to-br from-orange-400 to-blue-500" />
             <span className="hidden font-bold text-zinc-100 sm:block">OW Meta</span>
           </Link>
@@ -43,21 +46,7 @@ export function Navbar({ t }: NavbarProps) {
           </div>
         </div>
 
-        <div className="flex items-center gap-0.5 rounded-lg bg-zinc-800/60 p-1">
-          {LOCALES.map((loc) => (
-            <button
-              key={loc}
-              onClick={() => setLocale(loc)}
-              className={`rounded px-2 py-1 text-xs font-semibold transition-colors ${
-                locale === loc
-                  ? 'bg-zinc-700 text-zinc-100'
-                  : 'text-zinc-400 hover:text-zinc-200'
-              }`}
-            >
-              {loc.toUpperCase()}
-            </button>
-          ))}
-        </div>
+        <Segmented options={LOCALE_OPTIONS} value={locale} onChange={setLocale} />
       </div>
     </nav>
   )

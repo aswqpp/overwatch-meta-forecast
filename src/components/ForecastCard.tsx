@@ -1,18 +1,17 @@
-import { useUIStore } from '../store/uiStore'
+import type { SyntheticEvent } from 'react'
+import { useT } from '../hooks/useT'
 import { heroNames } from '../i18n'
 import { DeltaBadge } from './DeltaBadge'
 import { ConfidenceBadge } from './ConfidenceBadge'
 import { RoleBadge } from './RoleBadge'
 import type { HeroPrediction } from '../types'
-import type { Strings } from '../i18n'
 
-interface ForecastCardProps {
-  hero: HeroPrediction
-  t: Strings
+const hideOnError = (e: SyntheticEvent<HTMLImageElement>) => {
+  e.currentTarget.style.display = 'none'
 }
 
-export function ForecastCard({ hero, t }: ForecastCardProps) {
-  const { locale } = useUIStore()
+export function ForecastCard({ hero }: { hero: HeroPrediction }) {
+  const { t, locale } = useT()
   const displayName = heroNames[hero.id]?.[locale] ?? hero.name
 
   return (
@@ -24,12 +23,12 @@ export function ForecastCard({ hero, t }: ForecastCardProps) {
               src={`/heroes/${hero.id}.png`}
               alt={displayName}
               className="h-full w-full object-cover"
-              onError={(e) => { e.currentTarget.style.display = 'none' }}
+              onError={hideOnError}
             />
           </div>
           <div>
             <h3 className="font-bold text-zinc-100">{displayName}</h3>
-            <RoleBadge role={hero.role} t={t} />
+            <RoleBadge role={hero.role} />
           </div>
         </div>
         <span className="font-mono text-xs text-zinc-500">#{hero.tier_rank}</span>
@@ -56,7 +55,7 @@ export function ForecastCard({ hero, t }: ForecastCardProps) {
         </div>
       </div>
 
-      <ConfidenceBadge value={hero.confidence} t={t} />
+      <ConfidenceBadge value={hero.confidence} />
     </div>
   )
 }
