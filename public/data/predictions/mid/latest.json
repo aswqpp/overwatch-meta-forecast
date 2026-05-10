@@ -1,0 +1,27 @@
+{
+  "tier": "mid",
+  "generated_at": "2026-05-10T00:00:00Z",
+  "horizon": "7d",
+  "heroes": [
+    { "id": "reinhardt", "name": "Reinhardt",   "role": "tank",    "pick_rate": 0.161, "win_rate": 0.531, "delta_pick":  0.018, "delta_win":  0.010, "confidence": 0.87, "tier_rank":  1, "trend": "up" },
+    { "id": "mercy",     "name": "Mercy",        "role": "support", "pick_rate": 0.153, "win_rate": 0.519, "delta_pick":  0.007, "delta_win":  0.003, "confidence": 0.85, "tier_rank":  2, "trend": "up" },
+    { "id": "orisa",     "name": "Orisa",        "role": "tank",    "pick_rate": 0.139, "win_rate": 0.524, "delta_pick":  0.014, "delta_win":  0.008, "confidence": 0.83, "tier_rank":  3, "trend": "up" },
+    { "id": "dva",       "name": "D.Va",         "role": "tank",    "pick_rate": 0.127, "win_rate": 0.516, "delta_pick": -0.006, "delta_win": -0.002, "confidence": 0.82, "tier_rank":  4, "trend": "stable" },
+    { "id": "ana",       "name": "Ana",          "role": "support", "pick_rate": 0.119, "win_rate": 0.521, "delta_pick":  0.019, "delta_win":  0.011, "confidence": 0.84, "tier_rank":  5, "trend": "up" },
+    { "id": "soldier76", "name": "Soldier: 76",  "role": "damage",  "pick_rate": 0.112, "win_rate": 0.509, "delta_pick":  0.005, "delta_win":  0.001, "confidence": 0.80, "tier_rank":  6, "trend": "stable" },
+    { "id": "moira",     "name": "Moira",        "role": "support", "pick_rate": 0.108, "win_rate": 0.513, "delta_pick": -0.011, "delta_win": -0.006, "confidence": 0.79, "tier_rank":  7, "trend": "down" },
+    { "id": "lucio",     "name": "Lúcio",        "role": "support", "pick_rate": 0.102, "win_rate": 0.507, "delta_pick":  0.008, "delta_win":  0.004, "confidence": 0.78, "tier_rank":  8, "trend": "up" },
+    { "id": "tracer",    "name": "Tracer",       "role": "damage",  "pick_rate": 0.098, "win_rate": 0.503, "delta_pick":  0.012, "delta_win":  0.006, "confidence": 0.77, "tier_rank":  9, "trend": "up" },
+    { "id": "reaper",    "name": "Reaper",       "role": "damage",  "pick_rate": 0.094, "win_rate": 0.508, "delta_pick": -0.009, "delta_win": -0.004, "confidence": 0.76, "tier_rank": 10, "trend": "down" },
+    { "id": "hanzo",     "name": "Hanzo",        "role": "damage",  "pick_rate": 0.088, "win_rate": 0.498, "delta_pick": -0.014, "delta_win": -0.008, "confidence": 0.74, "tier_rank": 11, "trend": "down" },
+    { "id": "roadhog",   "name": "Roadhog",      "role": "tank",    "pick_rate": 0.085, "win_rate": 0.512, "delta_pick":  0.016, "delta_win":  0.009, "confidence": 0.75, "tier_rank": 12, "trend": "up" },
+    { "id": "kiriko",    "name": "Kiriko",        "role": "support", "pick_rate": 0.081, "win_rate": 0.510, "delta_pick":  0.010, "delta_win":  0.005, "confidence": 0.73, "tier_rank": 13, "trend": "up" },
+    { "id": "pharah",    "name": "Pharah",       "role": "damage",  "pick_rate": 0.077, "win_rate": 0.505, "delta_pick": -0.007, "delta_win": -0.003, "confidence": 0.72, "tier_rank": 14, "trend": "down" },
+    { "id": "cassidy",   "name": "Cassidy",      "role": "damage",  "pick_rate": 0.073, "win_rate": 0.501, "delta_pick":  0.002, "delta_win":  0.001, "confidence": 0.71, "tier_rank": 15, "trend": "stable" },
+    { "id": "zarya",     "name": "Zarya",        "role": "tank",    "pick_rate": 0.069, "win_rate": 0.514, "delta_pick":  0.021, "delta_win":  0.013, "confidence": 0.70, "tier_rank": 16, "trend": "up" },
+    { "id": "zenyatta",  "name": "Zenyatta",     "role": "support", "pick_rate": 0.065, "win_rate": 0.497, "delta_pick": -0.013, "delta_win": -0.007, "confidence": 0.68, "tier_rank": 17, "trend": "down" },
+    { "id": "junkrat",   "name": "Junkrat",      "role": "damage",  "pick_rate": 0.060, "win_rate": 0.494, "delta_pick": -0.018, "delta_win": -0.010, "confidence": 0.65, "tier_rank": 18, "trend": "down" },
+    { "id": "symmetra",  "name": "Symmetra",     "role": "damage",  "pick_rate": 0.055, "win_rate": 0.487, "delta_pick": -0.025, "delta_win": -0.015, "confidence": 0.62, "tier_rank": 19, "trend": "down" },
+    { "id": "torbjorn",  "name": "Torbjörn",     "role": "damage",  "pick_rate": 0.048, "win_rate": 0.483, "delta_pick": -0.029, "delta_win": -0.017, "confidence": 0.59, "tier_rank": 20, "trend": "down" }
+  ]
+}

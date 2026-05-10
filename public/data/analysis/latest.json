@@ -1,0 +1,11 @@
+{
+  "generated_at": "2026-05-10T00:00:00Z",
+  "patch": "2.6.0",
+  "top_rising":  ["ana", "echo", "winston", "sigma", "tracer"],
+  "top_falling": ["reaper", "symmetra", "hanzo", "pharah", "ramattra"],
+  "meta_summary": {
+    "ko": "패치 2.6.0에서 Ana와 Echo가 상위권 메타에서 두드러지게 상승했습니다. Sigma의 갑옷 버프와 Winston 이동 속도 개선으로 다이브 조합이 부활하는 추세입니다. 반면 Reaper와 Symmetra는 새로운 맵 구조에서 효율이 크게 감소했습니다.",
+    "en": "In patch 2.6.0, Ana and Echo have risen significantly in high-tier meta. Sigma's armor buff and Winston's mobility improvement are bringing dive compositions back into the spotlight. Meanwhile, Reaper and Symmetra have seen notable drops in effectiveness on the new map layouts.",
+    "ja": "パッチ2.6.0では、アナとエコーが上位メタで大幅に上昇しました。シグマの防御バフとウィンストンの機動力向上により、ダイブ構成が復活する傾向にあります。一方、リーパーとシンメトラは新マップ構造での有効性が大きく低下しています。"
+  }
+}
